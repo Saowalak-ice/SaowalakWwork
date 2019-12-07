@@ -1,0 +1,43 @@
+<html>
+<head>
+ <title>Homework01_JS_special</title>
+<script type="text/javascript">
+	function Main()
+	{
+	n = 0;
+
+	array1 = ["Pak", "Ind","Lhr","Isb","PHYsics"]
+	array2 = []
+	
+	//Converting Array to a string and showing it on page
+	//document.getElementById('data').innerText = arr.toString();
+	
+	var btn = document.getElementById('btnExecute');
+		
+		btn.onclick = function()
+		{
+			for (i=0 ; i<array1.length ; i++)
+				{
+					n = i%2 ;
+					if ( n == 0 )
+					{
+						array2[i] = array1[i].toLowerCase(); 
+					}
+					else
+					{
+						array2[i] = array1[i].toUpperCase(); 
+					}
+				}
+				alert(array2)
+			//Write your logic here		
+		};//end of onclick		
+	}//end of Main
+	
+</script>
+
+</head>
+<body onload="Main();">
+	<h1 id='data'></h1>
+	<button id="btnExecute">Execute</button> <br>
+</body>
+</html>
